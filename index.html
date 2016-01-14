@@ -18,7 +18,11 @@
 	<input ng-model="row.data" >
 	{{colors}}
 	<hr>
-    <multi-check src="colors" ng-model="row.data"></multi-check>
+    <multi-simple-check items="colors" ng-model="row.data"></multi-simple-check>
+	<hr>
+	<multi-check all-items-key="0" all-items-label="'--  all --'" items="colorsRows" item-key="'id'" item-label="'name'" ng-model="row.ids1"></multi-check>
+	<hr>
+	<multi-check  items="colorsRows" item-key="'id'" item-label="'name'" ng-model="row.ids"></multi-check>
   </div>
 </body>
 </html>
