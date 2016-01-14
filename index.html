@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="angularMultiCheck">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - MultiCheck</title>
+  
+
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+  <script src="angular-multi-check.js"></script>
+  
+<style>multi-check label{display: block;}</style>
+  
+</head>
+<body >
+    <div ng-controller="demoController">
+	{{row}} 
+	<input ng-model="row.data" >
+	{{colors}}
+	<hr>
+    <multi-check src="colors" ng-model="row.data"></multi-check>
+  </div>
+</body>
+</html>
