@@ -1,4 +1,4 @@
-angular.module('angularMultiCheck', [])
+angular.module('angularMultiCheckDemo',['angularMultiCheck'])
 .controller('demoController',function($scope,$timeout){
 	$scope.colors=['red','green','white','blue'];
 	$scope.colorsRows=[{id:1,name:'red'},{id:2,name:'green'} ]
@@ -11,6 +11,6 @@ angular.module('angularMultiCheck', [])
 	},1000)
 	
 	$timeout(function(){
-		$scope.colorsRows=[{id:1,name:'red'},{id:2,name:'green'},{id:3,name:'white'},{id:4,name:'blue'}]
+		$scope.colorsRows=[{id:1,name:'red'},{id:2,name:'green'},{id:3,name:'white'},{id:4,name:'blue'},{id:2,name:'green'},{id:3,name:'white'},{id:4,name:'blue'},{id:2,name:'green'},{id:3,name:'white'},{id:4,name:'blue'},{id:2,name:'green'},{id:3,name:'white'},{id:4,name:'blue'},{id:2,name:'green'},{id:3,name:'white'},{id:4,name:'blue'}]
 	},4000)
 })

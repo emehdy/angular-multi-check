@@ -1,0 +1,5 @@
+.multi-check label{display: block;}
+.multi-check-items {    max-height: 100px;    overflow-y: auto;}
+.multi-check-items label {    border: 1px solid gray;    margin-bottom: -1px;}
+.multi-check {    border: 1px solid gray;    padding: 2px;}
+ 

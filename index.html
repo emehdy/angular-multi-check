@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="angularMultiCheck">
+<html lang="en" ng-app="angularMultiCheckDemo">
 <head>
   <meta charset="UTF-8">
   <title>Example - MultiCheck</title>
@@ -9,7 +9,23 @@
   <script src="app.js"></script>
   <script src="angular-multi-check.js"></script>
   
-<style>.multi-check label{display: block;}</style>
+<style>
+.multi-check label{display: block;}
+.multi-check-items {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.multi-check-items label {
+    border: 1px solid gray;
+    margin-bottom: -1px;
+}
+
+.multi-check {
+    border: 1px solid gray;
+    padding: 2px;
+}
+</style>
   
 </head>
 <body >

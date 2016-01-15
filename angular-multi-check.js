@@ -1,4 +1,4 @@
- angular.module('angularMultiCheck')
+ angular.module('angularMultiCheck', [])
      
     .directive('multiCheck', function() 
 	{
@@ -6,7 +6,7 @@
 			restrict: 'E',
 			require: 'ngModel',
 			replace:true,
-			template:'<div class="multi-check"><label class="multi-check-all" ng-if="allItemsLabel"><input ng-model="all.status" ng-change="all.check()" type="checkbox">{{allItemsLabel}}</label><label ng-repeat="item in items" ng-hide="all.status"><input ng-model="data[item[itemKey]]" ng-change="check()"  type="checkbox">{{item[itemLabel]}}</label></div>',//
+			template:'<div class="multi-check"><div class="multi-check-all"><label ng-if="allItemsLabel"><input ng-model="all.status" ng-change="all.check()" type="checkbox">{{allItemsLabel}}</label></div><div class="multi-check-items"><label ng-repeat="item in items" ng-hide="all.status"><input ng-model="data[item[itemKey]]" ng-change="check()"  type="checkbox">{{item[itemLabel]}}</label></div></div>',//
 			scope:{
 				model:'=ngModel',
 				items:'=',
@@ -64,7 +64,7 @@
 			restrict: 'E',
 			require: 'ngModel',
 			replace:true,
-			template:'<div class="multi-check"><label ng-repeat="item in items"><input ng-model="data[item]" ng-change="check()" type="checkbox">{{item}}</label></div>',//
+			template:'<div class="multi-check"><div class="multi-check-items"><label ng-repeat="item in items"><input ng-model="data[item]" ng-change="check()" type="checkbox">{{item}}</label></div></div>',//
 			scope:{model:'=ngModel',items:'=',itemKey:'='},
 			link: function (scope, element, attrs) 
 			{
@@ -85,3 +85,5 @@
 			}
 		}
     });
+	
+	
