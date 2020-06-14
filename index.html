@@ -10,21 +10,17 @@
   <script src="angular-multi-check.js"></script>
   
 <style>
-.multi-check label{display: block;}
-.multi-check-items {
-    max-height: 100px;
-    overflow-y: auto;
-}
+ 
+ 
 
-.multi-check-items label {
-    border: 1px solid gray;
-    margin-bottom: -1px;
-}
+ 
 
-.multi-check {
-    border: 1px solid gray;
-    padding: 2px;
-}
+ 
+.multi-check label{display: block;padding: 5px;border: 1px solid #ced4da;margin: 0;margin-bottom: -1px;font-weight: 100;}
+		.multi-check-items label input { margin: 0 5px;}
+		.multi-check-items {max-height: 100px;overflow-y: scroll;min-height: 30px;}
+		 
+		.multi-check {border-bottom: 1px solid #ced4da;}
 </style>
   
 </head>
@@ -36,7 +32,7 @@
 	<hr>
     <multi-simple-check items="colors" ng-model="row.data"></multi-simple-check>
 	<hr>
-	<multi-check all-items-key="0" all-items-label="'--  all --'" items="colorsRows" item-key="'id'" item-label="'name'" ng-model="row.ids1"></multi-check>
+	<multi-check all-items-key="0" all-items-label="--  all --" items="colorsRows" item-key="'id'" item-label="'name'" ng-model="row.ids1"></multi-check>
 	<hr>
 	<multi-check  items="colorsRows" item-key="'id'" item-label="'name'" ng-model="row.ids"></multi-check>
   </div>

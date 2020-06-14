@@ -1,3 +1,4 @@
+//by emehdy@gmail
  angular.module('angularMultiCheck', [])
      
     .directive('multiCheck', function() 
@@ -12,8 +13,8 @@
 				items:'=',
 				itemKey:'=',
 				itemLabel:'=',
-				allItemsKey:'=',
-				allItemsLabel:'=',
+				allItemsKey:'@',
+				allItemsLabel:'@',
 			},
 			link: function (scope, element, attrs) 
 			{
